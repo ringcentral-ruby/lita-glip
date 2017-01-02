@@ -111,6 +111,8 @@ Lita Glip Adapter &copy; 2016-2017 by John Wang
  [coverage-status-link]: https://coveralls.io/r/ringcentral-ruby/lita-glip?branch=master
  [dependency-status-svg]: https://gemnasium.com/ringcentral-ruby/lita-glip.svg
  [dependency-status-link]: https://gemnasium.com/ringcentral-ruby/lita-glip
+ [codacy-svg]: https://api.codacy.com/project/badge/Grade/35abeb643e404062a980c2cb8f279865
+ [codacy-link]: https://www.codacy.com/app/ringcentral-ruby/lita-glip
  [codeclimate-status-svg]: https://codeclimate.com/github/ringcentral-ruby/lita-glip/badges/gpa.svg
  [codeclimate-status-link]: https://codeclimate.com/github/ringcentral-ruby/lita-glip
  [scrutinizer-status-svg]: https://scrutinizer-ci.com/g/ringcentral-ruby/lita-glip/badges/quality-score.png?b=master
