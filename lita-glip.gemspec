@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name          = 'lita-glip'
-  spec.date          = '2017-01-01'
-  spec.version       = '0.0.1'
+  spec.date          = '2017-01-02'
+  spec.version       = '0.0.2'
   spec.authors       = ['John Wang']
   spec.email         = ["johncwang@gmail.com"]
   spec.description   = %q{A Glip adapter for Lita.}
@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
   spec.metadata      = { 'lita_plugin_type' => 'adapter' }
 
-  #spec.files         = `git ls-files`.split($/)
-  spec.files         = Dir['lib/**/**/*']
+  spec.files         = `git ls-files`.split($/)
+  #spec.files         = Dir['lib/**/**/*']
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
