@@ -1,3 +1,5 @@
+require 'multi_json'
+
 module Lita
   module Adapters
     class Glip < Adapter
@@ -12,6 +14,8 @@ module Lita
 
         def update(message)
           m = message
+
+          Lita.logger.debug("Glip Message Received: #{MultiJson.encode(m)}")
 
           unless m.is_a?(Hash) && m.key?('event') && m['event'].index('/glip/posts').is_a?(Integer)
             return
@@ -30,6 +34,7 @@ module Lita
           post = message['body']['post']['text'].to_s
           msg = Lita::Message.new @robot, post, source
 
+          Lita.logger.debug("Glip Lita Message Built")
           @robot.receive msg
         end
       end
