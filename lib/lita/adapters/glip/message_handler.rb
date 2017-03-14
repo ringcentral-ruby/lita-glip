@@ -12,7 +12,8 @@ module Lita
 
         def update(message)
           m = message
-          unless m.is_a?(Hash) && m.key?('event') && m['event'].index('/glip/posts').is_a?(Fixnum)
+
+          unless m.is_a?(Hash) && m.key?('event') && m['event'].index('/glip/posts').is_a?(Integer)
             return
           end
           unless m.key?('body') && m['body'].key?('messageType') && m['body']['messageType'] == "PostAdded"
