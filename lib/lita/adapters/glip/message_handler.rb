@@ -15,11 +15,12 @@ module Lita
         def update(message)
           m = message
 
-          Lita.logger.debug("Glip Message Received: #{MultiJson.encode(m)}")
+          Lita.logger.debug("#{@logger_prefix}Glip Lita: Glip Message Received: #{MultiJson.encode(m)}")
 
           unless m.is_a?(Hash) && m.key?('event') && m['event'].index('/glip/posts').is_a?(Integer)
             return
           end
+
           unless m.key?('body') && m['body'].key?('messageType') && m['body']['messageType'] == "PostAdded"
             return
           end
@@ -34,7 +35,7 @@ module Lita
           post = message['body']['post']['text'].to_s
           msg = Lita::Message.new @robot, post, source
 
-          Lita.logger.debug("Glip Lita Message Built")
+          Lita.logger.debug("#{@logger_prefix}Glip Lita: Robot Message Built")
           @robot.receive msg
         end
       end

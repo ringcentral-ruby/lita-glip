@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'lita', '~> 4', '>= 4.4.3'
-  spec.add_runtime_dependency 'glip_sdk', '~> 0', '>= 0.0.3'
+  spec.add_runtime_dependency 'glip_sdk', '~> 0', '>= 0.0.5'
   spec.add_runtime_dependency 'multi_json', '~> 1', '>= 1.12.1'
 
   spec.add_development_dependency 'bundler', '~> 1.3'

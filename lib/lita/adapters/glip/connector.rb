@@ -19,6 +19,7 @@ module Lita
             config.app_key = app_key
             config.app_secret = app_secret
             config.server_url = server
+            config.logger = Lita.logger
           end
           @glip_sdk = GlipSdk::REST::Client.new @rc_sdk
           @username = username
