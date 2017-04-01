@@ -49,6 +49,7 @@ module Lita
 
         def message(group_id, strings)
           strings.each do |s|
+            Lita.logger.debug("#{@logger_prefix}Send Message To Glip From Lita: #{s}.")
             @glip_sdk.posts.post groupId: group_id, text: s
           end
         end
