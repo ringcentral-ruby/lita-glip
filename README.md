@@ -1,6 +1,8 @@
 Lita Glip Adapter
 =================
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/35abeb643e404062a980c2cb8f279865)](https://www.codacy.com/app/ringcentral-ruby/lita-glip?utm_source=github.com&utm_medium=referral&utm_content=ringcentral-ruby/lita-glip&utm_campaign=badger)
+
 [![Gem Version][gem-version-svg]][gem-version-link]
 [![Build Status][build-status-svg]][build-status-link]
 [![Coverage Status][coverage-status-svg]][coverage-status-link]
