@@ -12,6 +12,9 @@ Lita Glip Adapter
 [![Docs][docs-rubydoc-svg]][docs-rubydoc-link]
 [![License][license-svg]][license-link]
 
+[![Stack Overflow][stackoverflow-svg]][stackoverflow-url]
+[![Chat][chat-svg]][chat-url]
+
 `lita-glip` is an adapter for [Lita](https://www.lita.io/) that allows you to use the robot with [Glip](https://glip.com/).
 
 ## Installation
@@ -121,3 +124,7 @@ Lita Glip Adapter &copy; 2016-2017 by John Wang
  [docs-rubydoc-link]: http://www.rubydoc.info/gems/lita-glip/
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
  [license-link]: https://github.com/ringcentral-ruby/lita-glip/blob/master/LICENSE.md
+ [chat-svg]: https://img.shields.io/badge/chat-on%20glip-orange.svg
+ [chat-url]: https://glipped.herokuapp.com/
+ [stackoverflow-svg]: https://img.shields.io/badge/Stack%20Overflow-glip-orange.svg
+ [stackoverflow-url]: https://stackoverflow.com/questions/tagged/glip
