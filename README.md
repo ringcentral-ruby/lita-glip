@@ -27,6 +27,11 @@ gem "lita-glip"
 
 ## Configuration
 
+The Lita adapter does not support the Glip interactive bot provisioning process yet. This is because the process requires a publicly accessible OAuth redirect URL and it appears this is supported only for handlers and not adapters at the moment. To configure Lita, do the following:
+
+* Use a stand-in bot to get permanent bot access token to use in the Lita config like [glipbot_auth](https://github.com/grokify/oauth2util-go/tree/master/examples/glipbot_auth)
+* Use username/password credentials for a user extension. This is deprecated and not recommended but can be easier than setting up a stand-in bot.
+
 ### Direct
 
 ```ruby
@@ -37,9 +42,7 @@ Lita.configure do |config|
   config.adapters.glip.app_key = 'my_app_key'
   config.adapters.glip.app_secret = 'my_app_secret'
   config.adapters.glip.server_url = 'https://platform.devtest.ringcentral.com'
-  config.adapters.glip.username = '16505550100'
-  config.adapters.glip.extension = '101'
-  config.adapters.glip.password = 'my_password'
+  config.adapters.glip.token = {"access_token":"DEADBEEF","token_type":"bearer","expiry":"2085-11-06T01:35:52.873185841-08:00"}
 end
 ```
 
@@ -63,6 +66,24 @@ LITA_ROBOT_ADAPTER__TYPESYM=glip
 LITA_ADAPTERS_GLIP_appKey=my_app_key
 LITA_ADAPTERS_GLIP_appSecret=my_app_secret
 LITA_ADAPTERS_GLIP_serverUrl=https://platform.devtest.ringcentral.com
+LITA_ADAPTERS_GLIP_TOKEN={"access_token":"DEADBEEF","token_type":"bearer","expiry":"2085-11-06T01:35:52.873185841-08:00"}
+```
+
+#### Username/Password Approach
+
+Use the following in your Lita Config and `.env` file to configure the bot using a user extension:
+
+Lita Config
+
+```ruby
+  config.adapters.glip.username = '16505550100'
+  config.adapters.glip.extension = '101'
+  config.adapters.glip.password = 'my_password'
+```
+
+`.env.` file:
+
+```
 LITA_ADAPTERS_GLIP_USERNAME=16505550100
 LITA_ADAPTERS_GLIP_EXTENSION=101
 LITA_ADAPTERS_GLIP_PASSWORD=my_password
