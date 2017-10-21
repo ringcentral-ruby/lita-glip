@@ -14,10 +14,18 @@ module Lita
       config :app_secret, type: String, required: true
       config :server_url, type: String, default: 'platform.devtest.ringcentral.com'
 
-      config :username, type: String, required: true
+      config :username, type: String
       config :extension, type: String
-      config :password, type: String, required: true
+      config :password, type: String
       config :token, type: String
+
+      def initialize(robot)
+        @robot = robot
+      end
+
+      def log
+        Lita.logger
+      end
 
       def initialize(robot)
         super

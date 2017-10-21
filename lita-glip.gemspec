@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name          = 'lita-glip'
-  spec.date          = '2017-04-01'
-  spec.version       = '0.1.0'
+  spec.date          = '2017-10-21'
+  spec.version       = '0.2.0'
   spec.authors       = ['John Wang']
   spec.email         = ["johncwang@gmail.com"]
   spec.description   = %q{A Glip adapter for Lita.}

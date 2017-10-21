@@ -39,7 +39,8 @@ module Lita
             token = MultiJson.encode @rc_sdk.token.to_hash
             Lita.logger.debug("#{@logger_prefix}Authorized with token: #{token}.")
           else
-            @rc_sdk.set_token @token
+            Lita.logger.debug("#{@logger_prefix}Loading token: #{@token}.")
+            @rc_sdk.set_token MultiJson.decode @token
           end
 
           @glip_sdk = GlipSdk::REST::Client.new @rc_sdk
